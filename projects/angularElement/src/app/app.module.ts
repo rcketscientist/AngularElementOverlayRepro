@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { createCustomElement } from '@angular/elements';
-import { NgModule, Injector } from '@angular/core';
+import { NgModule, Injector, ApplicationRef } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ExampleComponent } from './example/example.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { environment } from '../environments/environment';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     MatSelectModule,
     MatTooltipModule
   ],
@@ -25,7 +28,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 })
 export class AppModule {
   constructor(private injector: Injector) {}
+
   ngDoBootstap() {
-    customElements.define('example', createCustomElement(ExampleComponent, { injector: this.injector }));
+      customElements.define('example-element', createCustomElement(ExampleComponent, { injector: this.injector }));
   }
 }

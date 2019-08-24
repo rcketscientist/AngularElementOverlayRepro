@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npm run build:element && cp element-package/plugin.bundle.js src/assets && ng serve",
     "build": "ng build",
+    "build:element": "ng build angularElement --prod --extraWebpackConfig webpack.extra.js --single-bundle true --output-hashing none --vendor-chunk false",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "build:element": "ng build angularElement --prod --extraWebpackConfig webpack.extra.js --single-bundle true --output-hashing none --vendor-chunk false"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
