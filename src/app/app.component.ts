@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef, MatDialog } from '@angular/material/dialog';
+import { MatDialogRef, MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +19,6 @@ export class AppComponent {
 @Component({
   selector: 'dialog-overview-example-dialog',
   template: `
-  <div>TEST</div>
   <example-element></example-element>
   `
 })
