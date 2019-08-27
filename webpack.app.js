@@ -7,8 +7,9 @@ module.exports = {
     "@angular/platform-browser": "ng.platformBrowser",
     "@angular/platform-browser-dynamic": "ng.platformBrowserDynamic",
     "@angular/compiler": "ng.compiler",
-    "@angular/elements": "ng.elements",
+    // "@angular/elements": "ng.elements",
     "@angular/cdk": "ng.cdk",
+    // "@angular/cdk/bidi": "ng.cdk.bidi",
     "@angular/material": "ng.material"
   }
 }

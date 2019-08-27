@@ -13,6 +13,7 @@ module.exports = {
     "@angular/compiler": "ng.compiler",
     // "@angular/elements": "ng.elements",
     "@angular/cdk": "ng.cdk",
+    // "@angular/cdk/bidi": "ng.cdk.bidi",
     "@angular/material": "ng.material"
   }
 }
