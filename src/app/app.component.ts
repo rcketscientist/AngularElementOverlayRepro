@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MatDialog } from '@angular/material/dialog';
+import { OverlayContainer } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,10 @@ import { MatDialogRef, MatDialog } from '@angular/material/dialog';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(public dialog: MatDialog) {}
+  constructor(
+    public dialog: MatDialog,
+    public overlay: OverlayContainer
+    ) {}
 
   openDialog() {
     const dialogRef = this.dialog.open(ExampleOverlay, {
@@ -25,5 +29,6 @@ export class AppComponent {
 export class ExampleOverlay {
 
   constructor(
-    public dialogRef: MatDialogRef<ExampleOverlay>) {}
+    public dialogRef: MatDialogRef<ExampleOverlay>,
+    public overlay: OverlayContainer) {}
 }

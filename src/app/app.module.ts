@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
+import { OverlayContainer } from '@angular/cdk/overlay';
+import { AppOverlayContainer } from './app.overlay.container';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatButtonModule,
     MatDialogModule
   ],
-  providers: [],
+  providers: [
+    { provide: OverlayContainer, useClass: AppOverlayContainer },
+  ],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
