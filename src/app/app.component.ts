@@ -22,9 +22,7 @@ export class AppComponent {
 
 @Component({
   selector: 'dialog-overview-example-dialog',
-  template: `
-  <example-element></example-element>
-  `
+  template: `<example-element></example-element>`
 })
 export class ExampleOverlay {
 
